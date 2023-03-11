@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.wrapper {
+  background-color: #b9d0eb;
+  width: 90vw;
+  margin: 0 auto;
+
+}
+
+.accordion {
+  margin: 0 auto;
+  list-style: none;
+  max-width: 80vw;
+  min-height: 100vh;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  padding: 0.5vw;
+  border-bottom: 0.1vw solid #5a95fd;
+  cursor: pointer;
+}
+
+.accordion-item:last-of-type {
+  border-bottom: none;
+}
+
+.accordion__head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close {
+  height: 0.01vh;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+.accordion__target {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 0.01vh;
+  margin: -0.01vw;
+  overflow: hidden;
+  padding: 0;
+  width: 0.01vw;
+}
+
+.accordion__label {
+  display: block;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #091bbe;
+
+}
+
+.accordion__input {
+  display: none;
+}
+
+.accordion__input:checked~.accordion__label {
+  color: black;
+}
+
+.accordion__input:checked+.accordion__label>.accordion__target {
+  position: static;
+  overflow: visible;
+  clip: auto;
+  margin: auto;
+  padding: 1.2rem;
+  width: auto;
+  height: auto;
+  animation: opacity ease 2s;
+}
+
+.accordion__input:checked+.accordion__label>.accordion__head>.close {
+  transform: rotate(45deg);
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+@media screen {
+  .accordion-item:hover:active>.accordion__label {
+    color: #091bbe;
+  }
+
+  .accordion-item:hover .accordion__target {
+    position: static;
+    overflow: visible;
+    clip: auto;
+    margin: auto;
+    padding: 1.2rem;
+    width: auto;
+    height: auto;
+    animation: opacity ease 2s;
+    transition: all 1s ease;
+  }
+
+  .accordion:hover .close {
+    height: 3vh;
+  }
+
+  .accordion:hover .accordion__label {
+    color: black;
+  }
+
+  .accordion-item:hover>.accordion__label>.accordion__head>.close {
+    transform: rotate(45deg);
+  }
+}
+
+@media (min-width: 820px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .accordion-item {
+    padding: 10px;
+  }
+
+  .accordion__label {
+    font-size: 1.2rem;
+  }
+
+  .img {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1920px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  .wrapper {
+    width: 50vw;
+  }
+
+  .accordion {
+    max-width: 40vw;
+  }
+
+  .accordion__label {
+    font-size: 1.5rem;
+  }
+
+  .img {
+    width: 70%;
+  }
+
+
+}
