@@ -130,6 +130,9 @@
 }
 
 @media (min-width: 820px) {
+  h1 {
+    font-size: 3rem;
+  }
   .accordion-item {
     padding: 10px;
   }
@@ -144,6 +147,9 @@
 }
 
 @media (min-width: 1920px) {
+  h1 {
+    font-size: 3.5rem;
+  }
   .wrapper {
     width: 50vw;
   }
