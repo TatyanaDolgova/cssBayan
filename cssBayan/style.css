@@ -2,14 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+
 }
 
 .wrapper {
   background-color: #b9d0eb;
   width: 90vw;
   margin: 0 auto;
-  
+
 }
 
 .accordion {
@@ -68,11 +68,11 @@
   display: none;
 }
 
-.accordion__input:checked ~ .accordion__label {
+.accordion__input:checked~.accordion__label {
   color: black;
 }
 
-.accordion__input:checked + .accordion__label > .accordion__target {
+.accordion__input:checked+.accordion__label>.accordion__target {
   position: static;
   overflow: visible;
   clip: auto;
@@ -83,7 +83,7 @@
   animation: opacity ease 2s;
 }
 
-.accordion__input:checked + .accordion__label > .accordion__head > .close {
+.accordion__input:checked+.accordion__label>.accordion__head>.close {
   transform: rotate(45deg);
 }
 
@@ -100,7 +100,7 @@
 
 
 @media screen {
-  .accordion-item:hover:active > .accordion__label {
+  .accordion-item:hover:active>.accordion__label {
     color: #091bbe;
   }
 
@@ -124,7 +124,7 @@
     color: black;
   }
 
-  .accordion-item:hover > .accordion__label > .accordion__head > .close {
+  .accordion-item:hover>.accordion__label>.accordion__head>.close {
     transform: rotate(45deg);
   }
 }
@@ -133,9 +133,11 @@
   .accordion-item {
     padding: 10px;
   }
+
   .accordion__label {
     font-size: 1.2rem;
   }
+
   .img {
     width: 60%;
   }
@@ -145,6 +147,7 @@
   .wrapper {
     width: 50vw;
   }
+
   .accordion {
     max-width: 40vw;
   }
@@ -156,6 +159,6 @@
   .img {
     width: 70%;
   }
-  
+
 
 }
